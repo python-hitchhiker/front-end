@@ -23,23 +23,27 @@
 
             <!-- Sign up -->
             <div class="col-md-1">
-              <button type="button" class="btn btn-dark float-end" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sign up</button>
-              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <button type="button" class="btn btn-dark float-end" id="signup" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Sign up</button>
+              <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title fs-5 fw-bold" id="staticBackdropLabel">Sign up</h5>
+                      <h5 class="modal-title fs-5 fw-bold" id="staticBackdropLabel1">Sign up for free</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <form class="">
                         <div class="form-floating mb-3">
-                          <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
-                          <label for="floatingInput">Email address</label>
+                          <input type="email" class="form-control rounded-4" id="signup-email" placeholder="name@example.com">
+                          <label for="signup-email">Email address</label>
                         </div>
                         <div class="form-floating mb-3">
-                          <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
-                          <label for="floatingPassword">Password</label>
+                          <input type="password" class="form-control rounded-4" id="signup-password" placeholder="Password">
+                          <label for="signup-password">Password</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control rounded-4" id="signup-username" placeholder="Password">
+                          <label for="signup-password">Full name</label>
                         </div>
                         <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
                         <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
@@ -59,23 +63,23 @@
               </div>
             </div>
             <!-- Sign in -->
-            <div class="col-md-1 float-end"><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sign in</button>
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="col-md-1 float-end"><button type="button" class="btn btn-dark" id="signin" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Sign in</button>
+            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title fs-5 fw-bold" id="staticBackdropLabel">Sign in</h5>
+                    <h5 class="modal-title fs-5 fw-bold" id="staticBackdropLabel2">Sign in</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <form class="">
                       <div class="form-floating mb-3">
-                        <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Email address</label>
+                        <input type="email" class="form-control rounded-4" id="signin-email" placeholder="name@example.com">
+                        <label for="signin-email">Email address</label>
                       </div>
                       <div class="form-floating mb-3">
-                        <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Password</label>
+                        <input type="password" class="form-control rounded-4" id="signin-password" placeholder="Password">
+                        <label for="signin-password">Password</label>
                       </div>
                       <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign in</button>
                       <hr class="my-4">
