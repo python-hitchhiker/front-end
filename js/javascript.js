@@ -27,6 +27,7 @@ window.onload = function () {
     // Set the initial text, which can also be configured in the fromTextArea
     myCodeMirror.setOption("value", initValue);
     // Editor key listening
+    myCodeMirror.setSize("", "35rem");
     var test = document.getElementById("test");
     test.onclick = function() {
         var value = myCodeMirror.getValue();
