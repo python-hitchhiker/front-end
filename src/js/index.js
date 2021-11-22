@@ -18,15 +18,36 @@ sitename.addEventListener('click', function (e) {
   location.replace(firstPage);
 });
 
-signin.addEventListener('click', async (e) => {
-  let response = await fetch(SERVER/user/login, {
+signup.addEventListener('click', async (e) => {
+  let response = await fetch(`${SERVER}/users`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
 		},
     body: JSON.stringify({
-      email: "#email",
-      password: "#password",
+      email: $('#signup-email').value,
+      password: $('#signup-password').value,
+      username: $('#signup-username').value,
+    }),
+	});
+
+	if (response.status === 200) {
+		success(await response.json());
+	}
+  else {
+		console.log("error: ${response.status}");
+	}
+});
+
+signin.addEventListener('click', async (e) => {
+  let response = await fetch(`${SERVER}/user/login`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+    body: JSON.stringify({
+      email: $('#signin-email').value,
+      password: $('#signin-password').value,
     }),
 	});
 
