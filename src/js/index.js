@@ -19,11 +19,15 @@ sitename.addEventListener('click', function (e) {
 });
 
 signin.addEventListener('click', async (e) => {
-  let response = await fetch(SERVER/users/login, {
-		method: 'GET',
+  let response = await fetch(SERVER/user/login, {
+		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
 		},
+    body: JSON.stringify({
+      email: "#email",
+      password: "#password",
+    }),
 	});
 
 	if (response.status === 200) {
