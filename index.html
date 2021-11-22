@@ -14,23 +14,100 @@
       <header class="py-3 mb-2 mt-2">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-11" id="sitename">
+            <div class="col-md-10" id="sitename">
               <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <svg class="bi me-2" width="40" height="32"><use href="index.html"/></svg>
                 <span class="fs-5">The Hitchhiker's Guide to Python</span>
               </a>
             </div>
+
+            <!-- Sign up -->
             <div class="col-md-1">
-              <div class="dropdown text-end" id="profile">
-                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                </a>
-                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                  <li><a class="dropdown-item" id="learn" href="#">Learn</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" id="signout" href="#">Sign out</a></li>
-                </ul>
+              <button type="button" class="btn btn-dark float-end" id="signup" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Sign up</button>
+              <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title fs-5 fw-bold" id="staticBackdropLabel1">Sign up for free</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="">
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control rounded-4" id="signup-email" placeholder="name@example.com">
+                          <label for="signup-email">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="password" class="form-control rounded-4" id="signup-password" placeholder="Password">
+                          <label for="signup-password">Password</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control rounded-4" id="signup-username" placeholder="Password">
+                          <label for="signup-password">Full name</label>
+                        </div>
+                        <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
+                        <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+                        <hr class="my-4">
+                        <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                          <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
+                          Sign up with GitHub
+                        </button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
+            <!-- Sign in -->
+            <div class="col-md-1 float-end"><button type="button" class="btn btn-dark" id="signin" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Sign in</button>
+            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title fs-5 fw-bold" id="staticBackdropLabel2">Sign in</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="">
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control rounded-4" id="signin-email" placeholder="name@example.com">
+                        <label for="signin-email">Email address</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control rounded-4" id="signin-password" placeholder="Password">
+                        <label for="signin-password">Password</label>
+                      </div>
+                      <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign in</button>
+                      <hr class="my-4">
+                      <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                      <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                        <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
+                        Sign in with GitHub
+                      </button>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <!-- Profile -->
+            <div class="dropdown text-end" id="profile">
+              <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+              <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                <li><a class="dropdown-item" id="learn" href="#">Learn</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" id="signout" href="#">Sign out</a></li>
+              </ul>
             </div>
           </div>
         </div>
