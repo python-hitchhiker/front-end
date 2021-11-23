@@ -9,3 +9,9 @@ div.scrollable-menu {
     max-height: 35rem;
     overflow-x: hidden;
 }
+
+div.outscroll{
+    height: auto;
+    max-height: 10rem;
+    overflow-x: hidden;
+}
