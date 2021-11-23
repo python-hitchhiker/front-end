@@ -38,3 +38,17 @@ window.onload = function () {
         });
     };
 };
+
+const SERVER = "http://localhost:3000"
+
+function example() {
+    fetch(`${SERVER}/content/010`).then((response) => response.json()
+    ).then(
+        (json) => {
+            let content = json.content;
+            let code = json.code;
+            document.querySelector("#content").innerHTML = marked.parse(content);
+            // Apply content / code to the HTML area
+        }
+    )
+};

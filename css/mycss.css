@@ -1,8 +1,9 @@
-.bottom-bar {
+div.bottom-bar {
     position: relative;
     bottom: 0px;
     margin: auto;
 }
+
 div.scrollable-menu {
     height: auto;
     max-height: 35rem;
