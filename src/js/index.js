@@ -66,8 +66,7 @@ learn.addEventListener('click', function(e) {
   window.open(studyPage);
 });
 
-signout.addEventListener('click', function(e) {
-  // 로그아웃
+signout.addEventListener('click', async(e) => {
   location.href=firstPage;
   location.replace(firstPage);
 });
