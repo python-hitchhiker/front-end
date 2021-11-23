@@ -29,7 +29,7 @@ signup.addEventListener('click', async (e) => {
 	});
 
 	if (response.status === 200) {
-		success(await response.json());
+		// success(await response.json());
 	}
   else {
 		console.log("error: ${response.status}");
@@ -50,7 +50,7 @@ signin.addEventListener('click', async (e) => {
 
 	if (response.status === 200) {
     console.log("success");
-		success(await response.json());
+		// success(await response.json());
     $('#profile').style.display= "block";
     $('#signup').style.display= "none";
     $('#signin').style.display= "none";
@@ -70,7 +70,7 @@ signout.addEventListener('click', async(e) => {
   });
 
   if (response.status === 200) {
-		success(await response.json());
+		// success(await response.json());
     $('#profile').style.display= "none";
     $('#signup').style.display= "block";
     $('#signin').style.display= "block";
