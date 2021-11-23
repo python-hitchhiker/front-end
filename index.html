@@ -28,7 +28,7 @@
 
   <body>
     <main>
-      <header class="py-3 mb-2 mt-2">
+      <header class="py-2 mb-2 mt-2">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-10" id="sitename">
@@ -131,27 +131,33 @@
         </div>
       </header>
     </main>
-    <div class="row align-items-md-stretch">
-      <div class="col-md-6">
-        <div class="h-100 p-4 bg-light border rounded-3 scrollable-menu" id="content">
-          <script>
-            example();
-          </script>
+    <div class="px-4">
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="p-4 bg-light border rounded-3 scrollable-menu" id="content" style="min-height: 35rem;">
+            <script>
+              example();
+            </script>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="forincode border">
+            <form action="">
+              <textarea id="editor" class="editor"></textarea>
+            </form>
+          </div>
+          <div class="h-100 p-4 bg-light border rounded-3 outscroll">
+            <p>this is for output</p>
+          </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <form action="">
-          <textarea id="editor" class="editor"></textarea>
-        </form>
+      <div class="row align-items-md-center p-4">
+        <div class="col-md"></div>
+        <div class="col-md-2 order-last text-end">
+          <button id="test" class="btn btn-primary">submit</button>
+        </div>
       </div>
     </div>
-    <div class="row align-items-md-center p-4">
-      <div class="col-md"></div>
-      <div class="col-md-2 order-last text-end">
-        <button id="test" class="btn btn-primary">submit</button>
-      </div>
-    </div>
-    
 
     <!-- FOOTER -->
     <footer class="container">
