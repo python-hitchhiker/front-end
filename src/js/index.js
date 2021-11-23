@@ -49,7 +49,9 @@ signin.addEventListener('click', async (e) => {
 	});
 
 	if (response.status === 200) {
+    console.log("success");
 		success(await response.json());
+    $('#profile').style.display= "block";
 	}
   else {
 		console.log("error: ${response.status}");
