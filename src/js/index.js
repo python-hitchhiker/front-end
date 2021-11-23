@@ -3,8 +3,8 @@
 const $ = (selector) => document.querySelector(selector);
 
 const sitename = $('#sitename');
-const signup = $('#signup');
-const signin = $('#signin');
+const signup = $('#signup-submit');
+const signin = $('#signin-submit');
 const signout = $('#signout');
 
 const firstPage = 'index.html';
@@ -52,6 +52,8 @@ signin.addEventListener('click', async (e) => {
     console.log("success");
 		success(await response.json());
     $('#profile').style.display= "block";
+    $('#signup').style.display= "none";
+    $('#signin').style.display= "none";
 	}
   else {
 		console.log("error: ${response.status}");
@@ -69,6 +71,9 @@ signout.addEventListener('click', async(e) => {
 
   if (response.status === 200) {
 		success(await response.json());
+    $('#profile').style.display= "none";
+    $('#signup').style.display= "block";
+    $('#signin').style.display= "block";
 	}
   else {
 		console.log("error: ${response.status}");
