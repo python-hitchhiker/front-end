@@ -1,4 +1,4 @@
-const SERVER = "http://localhost:3000"
+'use strict';
 
 function example() {
     fetch(`${SERVER}/content/description/010`).then((response) => response.json()
