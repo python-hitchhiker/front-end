@@ -5,6 +5,7 @@ const SERVER = "http://localhost:3000"
 const $ = (selector) => document.querySelector(selector);
 
 const sitename = $('#sitename');
+const signup = $('#signup');
 const signin = $('#signin');
 const learn = $('#learn');
 const signout = $('#signout');
@@ -40,7 +41,7 @@ signup.addEventListener('click', async (e) => {
 });
 
 signin.addEventListener('click', async (e) => {
-  let response = await fetch(`${SERVER}/user/login`, {
+  let response = await fetch(`${SERVER}/users/login`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -65,8 +66,7 @@ learn.addEventListener('click', function(e) {
   window.open(studyPage);
 });
 
-signout.addEventListener('click', function(e) {
-  // 로그아웃
+signout.addEventListener('click', async(e) => {
   location.href=firstPage;
   location.replace(firstPage);
 });
