@@ -1,3 +1,27 @@
+const SERVER = "http://localhost:3000"
+
+function example() {
+    fetch(`${SERVER}/content/description/010`).then((response) => response.json()
+    ).then(
+        (json) => {
+            let content = json.content;
+            let code = json.code;
+            document.querySelector("#content").innerHTML = marked.parse(content);
+            // Apply content / code to the HTML area
+        }
+    )
+};
+
+function sampleCode() {
+    fetch(`${SERVER}/content/code/010`).then((response) => response.json()
+    ).then(
+        (json) => {
+            let content = json.content;
+            return (json.content);
+        }
+    )
+};
+
 window.onload = function () {
     var el = document.getElementById("editor");
     var version = "# version: Python3\n\n";
@@ -27,7 +51,7 @@ window.onload = function () {
     // Set the initial text, which can also be configured in the fromTextArea
     myCodeMirror.setOption("value", initValue);
     // Editor key listening
-    myCodeMirror.setSize("", "35rem");
+    myCodeMirror.setSize("", "25rem");
     var test = document.getElementById("test");
     test.onclick = function() {
         var value = myCodeMirror.getValue();
@@ -37,18 +61,4 @@ window.onload = function () {
             console.log(res);
         });
     };
-};
-
-const SERVER = "http://localhost:3000"
-
-function example() {
-    fetch(`${SERVER}/content/010`).then((response) => response.json()
-    ).then(
-        (json) => {
-            let content = json.content;
-            let code = json.code;
-            document.querySelector("#content").innerHTML = marked.parse(content);
-            // Apply content / code to the HTML area
-        }
-    )
 };
