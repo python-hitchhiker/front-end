@@ -36,8 +36,8 @@ signup.addEventListener('click', async (e) => {
 	}
 });
 
-signin.addEventListener('click', async (e) => {
-  let response = await fetch(`${SERVER}/users/login`, {
+signin.addEventListener('click', function (e) {
+  fetch(`${SERVER}/users/login`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -46,20 +46,26 @@ signin.addEventListener('click', async (e) => {
       email: $('#signin-email').value,
       password: $('#signin-password').value,
     }),
-	});
+	})
+  .then((response) => response.json())
+  .then((json) => {
+    sessionStorage.setItem("isLoggedIn", true);
+    sessionStorage.setItem("email", json.email);
+    sessionStorage.setItem("id", json.id);
+    sessionStorage.setItem("progress", json.progress);
+  });
 
-	if (response.status === 200) {
-    console.log("success");
-		// success(await response.json());
-    $('#profile').style.display= "block";
-    $('#signup').style.display= "none";
-    $('#signin').style.display= "none";
-	}
-  else {
-		console.log("error: ${response.status}");
-	}
+  // if (response.status === 200) {
+  //   console.log("success");
+	// 	// success(await response.json());
+  //   $('#profile').style.display= "block";
+  //   $('#signup').style.display= "none";
+  //   $('#signin').style.display= "none";
+	// }
+  // else {
+	// 	console.log("error: ${response.status}");
+	// }
 });
-
 
 signout.addEventListener('click', async(e) => {
   let response = await fetch(`${SERVER}/users/logout`, {
