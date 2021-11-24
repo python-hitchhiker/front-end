@@ -29,7 +29,7 @@ signup.addEventListener('click', async (e) => {
 	});
 
 	if (response.status === 200) {
-		// success(await response.json());
+		success(await response.json());
 	}
   else {
 		console.log("error: ${response.status}");
@@ -53,6 +53,10 @@ signin.addEventListener('click', function (e) {
     sessionStorage.setItem("email", json.email);
     sessionStorage.setItem("id", json.id);
     sessionStorage.setItem("progress", json.progress);
+    $('#modal-signin').style.display= "none";
+    $('#profile').style.display= "block";
+    $('#signup').style.display= "none";
+    $('#signin').style.display= "none";
   });
 
   // if (response.status === 200) {
@@ -75,12 +79,12 @@ signout.addEventListener('click', async(e) => {
     },
   });
 
-  if (response.status === 200) {
-    $('#profile').style.display= "none";
-    $('#signup').style.display= "block";
-    $('#signin').style.display= "block";
-	}
-  else {
-		console.log("error: ${response.status}");
-  }
+  // if (response.status === 200) {
+  //   $('#profile').style.display= "none";
+  //   $('#signup').style.display= "block";
+  //   $('#signin').style.display= "block";
+	// }
+  // else {
+	// 	console.log("error: ${response.status}");
+  // }
 });
