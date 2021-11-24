@@ -59,14 +59,13 @@ signin.addEventListener('click', function (e) {
   }
 });
 
-signout.addEventListener('click', function(e) {
-  fetch(`${SERVER}/users/logout`, {
+signout.addEventListener('click', async(e) => {
+  let response = await fetch(`${SERVER}/users/logout`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
     },
   })
-  .then((response) => response.json())
   .then((json) => {
     sessionStorage.setItem("isLoggedIn", false);
   })
