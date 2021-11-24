@@ -148,8 +148,20 @@
         </div>
       </div>
       <div class="row align-items-md-center p-4">
-        <div class="col-md"></div>
-        <div class="col-md-2 order-last text-end">
+        <div class="col-md-1">
+          <a class="leftBtn" href="#">
+            <i class="material-icons">arrow_circle_left</i>
+          </a>
+          <a class="rightBtn" href="#">
+            <i class="material-icons">arrow_circle_right</i>
+          </a>
+        </div>
+        <div class="col-md-10">
+          <label for="customRange3" class="form-label">Example range</label>
+          <input type="range" class="form-range" min="0" max="29" step="1" id="customRange3" onchange="updateTextInput(this.value);">
+          <input type="text" id="textInput" value="">
+        </div>
+        <div class="col-md-1 order-last text-end">
           <button id="test" class="btn btn-primary">submit</button>
         </div>
       </div>

@@ -12,25 +12,35 @@ function example() {
     )
 };
 
-function sampleCode() {
-    fetch(`${SERVER}/content/code/005`).then((response) => response.json()
-    ).then(
-        (json) => {
-            let content = json.content;
-            return (json.content);
-        }
-    )
+async function sampleCode() {
+    const res = await fetch(`${SERVER}/content/code/010`);
+    if (res.ok) {
+        const data = await res.json();
+        return data.content;
+    }
 };
 
-window.onload = function () {
+// function sampleCode2() {
+//     fetch(`${SERVER}/content/code/010`)
+//     .then(function(response) {
+//     return response.json();
+//     })
+//     .then(function(myJson) {
+//     console.log(myJson);
+//     console.log(JSON.stringify(myJson.content));
+//     return (JSON.stringify(myJson.content));
+//   });
+// }
+
+window.onload = async function () {
     var el = document.getElementById("editor");
-    var version = "# version: Python3\n\n";
-    var codeAreaTip = "# please edit your code here:\n";
-    var codeStart = "# code start\n\n";
-    var codeEnd = "# code end\n\n";
-    var codeTip = "'''\nThis function is the entry of this program and\nit must be return your answer of current question.\n'''\n";
-    var code = "def solution():\n\tpass";
-    var initValue = version + codeAreaTip + codeStart + codeEnd + codeTip + code;
+    // var version = "# version: Python3\n\n";
+    var codeAreaTip = await sampleCode();
+    // var codeStart = "# code start\n\n";
+    // var codeEnd = "# code end\n\n";
+    // var codeTip = "'''\nThis function is the entry of this program and\nit must be return your answer of current question.\n'''\n";
+    // var code = "def solution():\n\tpass";
+    var initValue = codeAreaTip;
     var myCodeMirror = CodeMirror.fromTextArea(el, {
         mode: "python", // Language mode
         theme: "xq-light", // theme
