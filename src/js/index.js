@@ -79,8 +79,9 @@ signout.addEventListener('click', async(e) => {
     },
   });
 
-<<<<<<< HEAD
+
   // if (response.status === 200) {
+	// 	// success(await response.json());
   //   $('#profile').style.display= "none";
   //   $('#signup').style.display= "block";
   //   $('#signin').style.display= "block";
@@ -88,15 +89,4 @@ signout.addEventListener('click', async(e) => {
   // else {
 	// 	console.log("error: ${response.status}");
   // }
-=======
-  if (response.status === 200) {
-		// success(await response.json());
-    $('#profile').style.display= "none";
-    $('#signup').style.display= "block";
-    $('#signin').style.display= "block";
-	}
-  else {
-		console.log("error: ${response.status}");
-  }
->>>>>>> parent of c8cfc46 (Session storage)
 });
