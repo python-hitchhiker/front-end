@@ -80,36 +80,38 @@
             </div>
 
             <!-- Sign in -->
-            <div class="col-md-1 float-end"><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" id="signin" style="display: block">Sign in</button>
-            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title fs-5 fw-bold" id="staticBackdropLabel2">Sign in</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="form-floating mb-3">
-                      <input type="email" class="form-control rounded-4" id="signin-email" placeholder="name@example.com">
-                      <label for="signin-email">Email address</label>
+            <div class="col-md-1 float-end">
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" id="signin" style="display: block">Sign in</button>
+                <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title fs-5 fw-bold" id="staticBackdropLabel2">Sign in</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control rounded-4" id="signin-email" placeholder="name@example.com">
+                          <label for="signin-email">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="password" class="form-control rounded-4" id="signin-password" placeholder="Password">
+                          <label for="signin-password">Password</label>
+                        </div>
+                        <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" id="signin-submit" data-bs-dismiss="modal">Sign in</button>
+                        <hr class="my-4">
+                        <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                        <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4">
+                          <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
+                          Sign in with GitHub
+                        </button>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
                     </div>
-                    <div class="form-floating mb-3">
-                      <input type="password" class="form-control rounded-4" id="signin-password" placeholder="Password">
-                      <label for="signin-password">Password</label>
-                    </div>
-                    <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" id="signin-submit" data-bs-dismiss="modal">Sign in</button>
-                    <hr class="my-4">
-                    <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
-                    <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4">
-                      <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
-                      Sign in with GitHub
-                    </button>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                   </div>
                 </div>
-              </div>
             </div>
 
             <!-- Profile -->

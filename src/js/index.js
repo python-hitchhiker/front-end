@@ -27,13 +27,6 @@ signup.addEventListener('click', async (e) => {
       username: $('#signup-username').value,
     }),
 	});
-
-	if (response.status === 200) {
-		success(await response.json());
-	}
-  else {
-		console.log("error: ${response.status}");
-	}
 });
 
 signin.addEventListener('click', function (e) {
@@ -53,52 +46,31 @@ signin.addEventListener('click', function (e) {
     sessionStorage.setItem("email", json.email);
     sessionStorage.setItem("id", json.id);
     sessionStorage.setItem("progress", json.progress);
-    $('#modal-signin').style.display= "none";
+  })
+
+  if (sessionStorage.getItem("isLoggedIn") === "true") {
     $('#profile').style.display= "block";
     $('#signup').style.display= "none";
     $('#signin').style.display= "none";
-  });
-
-  // if (response.status === 200) {
-  //   console.log("success");
-	// 	// success(await response.json());
-  //   $('#profile').style.display= "block";
-  //   $('#signup').style.display= "none";
-  //   $('#signin').style.display= "none";
-	// }
-  // else {
-	// 	console.log("error: ${response.status}");
-	// }
+  }
+  else {
+    // snackbar notification: 로그인 실패 메시지
+    console.log("로그인 실패");
+  }
 });
 
-signout.addEventListener('click', async(e) => {
-  let response = await fetch(`${SERVER}/users/logout`, {
+signout.addEventListener('click', function(e) {
+  fetch(`${SERVER}/users/logout`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
     },
-  });
-
-<<<<<<< HEAD
-
-  // if (response.status === 200) {
-	// 	// success(await response.json());
-  //   $('#profile').style.display= "none";
-  //   $('#signup').style.display= "block";
-  //   $('#signin').style.display= "block";
-	// }
-  // else {
-	// 	console.log("error: ${response.status}");
-  // }
-=======
-  if (response.status === 200) {
-		// success(await response.json());
+  })
+  .then((response) => response.json())
+  .then((json) => {
+    sessionStorage.setItem("isLoggedIn", false);
     $('#profile').style.display= "none";
     $('#signup').style.display= "block";
     $('#signin').style.display= "block";
-	}
-  else {
-		console.log("error: ${response.status}");
-  }
->>>>>>> parent of c8cfc46 (Session storage)
+  })
 });
