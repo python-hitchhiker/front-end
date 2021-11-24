@@ -69,8 +69,14 @@ signout.addEventListener('click', function(e) {
   .then((response) => response.json())
   .then((json) => {
     sessionStorage.setItem("isLoggedIn", false);
+  })
+
+  if (sessionStorage.getItem("isLoggedIn") === "false") {
     $('#profile').style.display= "none";
     $('#signup').style.display= "block";
     $('#signin').style.display= "block";
-  })
+  }
+  else {
+    console.log("로그아웃 실패");
+  }
 });
