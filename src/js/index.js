@@ -46,17 +46,10 @@ signin.addEventListener('click', function (e) {
     sessionStorage.setItem("email", json.email);
     sessionStorage.setItem("id", json.id);
     sessionStorage.setItem("progress", json.progress);
-  })
-
-  if (sessionStorage.getItem("isLoggedIn") === "true") {
     $('#profile').style.display= "block";
     $('#signup').style.display= "none";
     $('#signin').style.display= "none";
-  }
-  else {
-    // snackbar notification: 로그인 실패 메시지
-    console.log("로그인 실패");
-  }
+  })
 });
 
 signout.addEventListener('click', async(e) => {
@@ -67,15 +60,12 @@ signout.addEventListener('click', async(e) => {
     },
   })
   .then((json) => {
-    sessionStorage.setItem("isLoggedIn", false);
-  })
-
-  if (sessionStorage.getItem("isLoggedIn") === "false") {
+    sessionStorage.removeItem("isLoggedIn");
+    sessionStorage.removeItem("email", json.email);
+    sessionStorage.removeItem("id", json.id);
+    sessionStorage.removeItem("progress", json.progress);
     $('#profile').style.display= "none";
     $('#signup').style.display= "block";
     $('#signin').style.display= "block";
-  }
-  else {
-    console.log("로그아웃 실패");
-  }
+  })
 });
