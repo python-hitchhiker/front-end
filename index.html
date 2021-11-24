@@ -34,7 +34,7 @@
           <div class="row">
             <div class="col-md-10" id="sitename">
               <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32"><use href="index.html"/></svg>
+                <img class="python" src="src/img/240px-Python-logo-notext.png" weight="40" height="32">
                 <span class="fs-5">The Hitchhiker's Guide to Python</span>
               </a>
             </div>
@@ -62,7 +62,7 @@
                         <input type="text" class="form-control rounded-4" id="signup-username" placeholder="Password">
                         <label for="signup-password">Full name</label>
                       </div>
-                      <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" id="signup-submit">Sign up</button>
+                      <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" id="signup-submit" data-bs-dismiss="modal">Sign up</button>
                       <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
                       <hr class="my-4">
                       <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
@@ -80,38 +80,40 @@
             </div>
 
             <!-- Sign in -->
-            <div class="col-md-1 float-end"><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" id="signin" style="display: block">Sign in</button>
-            <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title fs-5 fw-bold" id="staticBackdropLabel2">Sign in</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="form-floating mb-3">
-                      <input type="email" class="form-control rounded-4" id="signin-email" placeholder="name@example.com">
-                      <label for="signin-email">Email address</label>
+            <div class="col-md-1 float-end">
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" id="signin" style="display: block">Sign in</button>
+              <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title fs-5 fw-bold" id="staticBackdropLabel2">Sign in</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="form-floating mb-3">
-                      <input type="password" class="form-control rounded-4" id="signin-password" placeholder="Password">
-                      <label for="signin-password">Password</label>
+                    <div class="modal-body">
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control rounded-4" id="signin-email" placeholder="name@example.com">
+                        <label for="signin-email">Email address</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control rounded-4" id="signin-password" placeholder="Password">
+                        <label for="signin-password">Password</label>
+                      </div>
+                      <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" id="signin-submit" data-bs-dismiss="modal">Sign in</button>
+                      <hr class="my-4">
+                      <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                      <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                        <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
+                        Sign in with GitHub
+                      </button>
                     </div>
-                    <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" id="signin-submit">Sign in</button>
-                    <hr class="my-4">
-                    <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
-                    <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4">
-                      <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
-                      Sign in with GitHub
-                    </button>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            
+
 
             <!-- Profile -->
             <div class="dropdown text-end" id="profile" style="display: none">
@@ -157,7 +159,7 @@
     <!-- FOOTER -->
     <footer class="container">
       <p class="float-end"><a href="#">Back to top</a></p>
-      <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      <p>&copy; 2017–2021 Company, Inc!!!1. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
