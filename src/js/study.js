@@ -1,7 +1,7 @@
 'use strict';
 
 function example() {
-    fetch(`${SERVER}/content/description/010`).then((response) => response.json()
+    fetch(`${SERVER}/content/description/004`).then((response) => response.json()
     ).then(
         (json) => {
             let content = json.content;
@@ -13,7 +13,7 @@ function example() {
 };
 
 function sampleCode() {
-    fetch(`${SERVER}/content/code/010`).then((response) => response.json()
+    fetch(`${SERVER}/content/code/005`).then((response) => response.json()
     ).then(
         (json) => {
             let content = json.content;
@@ -39,9 +39,9 @@ window.onload = function () {
         smartIndent: true, // smart indent
         indentUnit: 4, // Smart indent in 4 spaces
         indentWithTabs: true, // Smart indent with tabs
-        lineWrapping: true, // 
+        lineWrapping: true, //
         // Add line number display, folder and syntax detector to the slot
-        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"], 
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
         foldGutter: true, // Enable code folding in slots
         autofocus: true, // Autofocus
         matchBrackets: true, // Match end symbols, such as "],}"
@@ -62,3 +62,4 @@ window.onload = function () {
         });
     };
 };
+

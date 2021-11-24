@@ -10,7 +10,13 @@
 
 ### ■ 팀원 구성
 
-[Python-hitchhiker](https://www.notion.so/f015440a9b5145a8a73a17b9787ec60a)
+| 인트라 아이디 | Name | Tags | 담당 개발 | email | github ID |
+| --- | --- | --- | --- | --- | --- |
+| sokim | 김소연 | 프론트엔드, 오거나이저 | mock-up / 로그인 | 42.4.sokim@gmail.com | SOYKIM |
+| jasong | 송재룡 | 프론트엔드, 리드 | mock-up / 예제코드 뷰 | jasong@sutdent.42seoul.kr | ft-jasong |
+| sunghwki | 김성환 | python 예제 | 프론트엔드 / python 예제 개발 | python 예제 30개 정리 | sunghwki@studet.42seoul.kr | swkim12345 |
+| jeonghwl | 이정환 | 백엔드 / 리드 | 백엔드 개선 참여 | jeonghwanlee15@gamil.com | toy-k |
+| sikang | 강시온 | 백엔드 / 풀스택 | express.js + SQLite + passport.js 기반 백엔드 개발 | 
 
 ### ■ 아이템 개요
 
@@ -29,6 +35,8 @@
 | parsing | 파싱 |
 | front-end | 프론트엔드 |
 | back-end | 백엔드 |
+| framework | 프레임워크 |
+
 
 ### ■ 구체적인 개발 방법
 

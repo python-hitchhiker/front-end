@@ -15,7 +15,3 @@ div.outscroll{
     max-height: 10rem;
     overflow-x: hidden;
 }
-
-.hidden {
-    display: none;
-}
