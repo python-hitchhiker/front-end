@@ -26,7 +26,13 @@ signup.addEventListener('click', async (e) => {
       password: $('#signup-password').value,
       username: $('#signup-username').value,
     }),
-	});
+	})
+  if (response.status === 200) {
+    console.log("회원가입 성공");
+  }
+  else {
+    console.log("회원가입 실패");
+  }
 });
 
 signin.addEventListener('click', function (e) {
@@ -40,7 +46,10 @@ signin.addEventListener('click', function (e) {
       password: $('#signin-password').value,
     }),
 	})
-  .then((response) => response.json())
+  .then((response) => { 
+    console.log(response);
+    return(response.json());
+  } )
   .then((json) => {
     sessionStorage.setItem("isLoggedIn", true);
     sessionStorage.setItem("email", json.email);
@@ -49,6 +58,9 @@ signin.addEventListener('click', function (e) {
     $('#profile').style.display= "block";
     $('#signup').style.display= "none";
     $('#signin').style.display= "none";
+  })
+  .catch((error) => {
+    console.log(error);
   })
 });
 
