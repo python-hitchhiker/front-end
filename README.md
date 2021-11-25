@@ -2,11 +2,11 @@
 
 ### ■ 프로젝트명
 
-- python을 여행하는 히치하이커를 위한 안내서
+- Backend.ai API 를 활용한 Python 코드 실습 사이트
 
 ### ■ 팀명
 
-- (대충 히치하이커)
+- Python Hitchhiker
 
 ### ■ 팀원 구성
 
