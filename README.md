@@ -2,6 +2,7 @@
 
 ### ■ 프로젝트명
 
+- The Hitchhiker's Guide to Python
 - Backend.ai API 를 활용한 Python 코드 실습 사이트
 
 ### ■ 팀명
